@@ -2,7 +2,7 @@
 
 Add the tap:
 
-    > brew tap bramstein/font
+    > brew tap bramstein/fonttools
 
 Update brew:
 
