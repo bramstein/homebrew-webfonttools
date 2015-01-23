@@ -9,7 +9,10 @@ class Sfntly < Formula
 
   def install
     system "ant"
-    libexec.install "dist/tools/conversion/eot/eotconverter.jar"
-    bin.write_jar_script libexec/"eotconverter.jar", "eotconverter"
+    libexec.install "dist/lib/sfntly.jar"
+    libexec.install "dist/tools/sfnttool/sfnttool.jar"
+    libexec.install "dist/tools/fontinfo/fontinfo.jar"
+    bin.write_jar_script libexec/"sfnttool.jar", "sfnttool"
+    bin.write_jar_script libexec/"fontinfo.jar", "fontinfo"
   end
 end
