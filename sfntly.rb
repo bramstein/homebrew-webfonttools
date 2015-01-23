@@ -9,5 +9,7 @@ class Sfntly < Formula
 
   def install
     system "ant"
+    libexec.install "dist/tools/conversion/eot/eotconverter.jar"
+    bin.write_jar_script libexec/"eotconverter.jar", "eotconverter"
   end
 end
