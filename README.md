@@ -1,8 +1,8 @@
-# Homebrew font tools
+# Homebrew web font tools
 
 Add the tap:
 
-    > brew tap bramstein/fonttools
+    > brew tap bramstein/webfonttools
 
 Update brew:
 
