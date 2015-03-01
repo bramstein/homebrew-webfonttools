@@ -3,7 +3,7 @@ require "formula"
 class Fonttools < Formula
   homepage "https://github.com/behdad/fonttools"
   url "https://github.com/behdad/fonttools/archive/2.5.tar.gz"
-  sha1 "8388a2e37ce349dac6555bb824c82723e3b65fbf"
+  sha1 "e972ed601602435b080ce79f129b441daefb2f75"
 
   depends_on :python if MacOS.version <= :snow_leopard
 
