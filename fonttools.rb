@@ -9,6 +9,7 @@ class Fonttools < Formula
 
   def install
     ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python2.7/site-packages"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python2.7/site-packages/FontTools"
 
     system "python", *Language::Python.setup_install_args(libexec)
 
