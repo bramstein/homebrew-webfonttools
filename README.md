@@ -15,6 +15,7 @@ Then install any of the following formula by using `brew install <formula>`:
 * `woff2`: WOFF2 compression and decompression utilities by Google. This installs two utilities `woff2_compress` to compress and `woff2_decompress` to decompress.
 * `ttf2eot`: Tool for converting TrueType font files to the embedded OpenType format (EOT). Does not include MTX compression. The installed utility is called `ttf2eot`.
 * `sfntly`: Google's subsetting and font conversion tools. This will install two utilities called `sfnttool` and `fontinfo`. The `sfnttool` utility performs subsetting and can also create WOFF and EOT files. The `fontinfo` utility shows you information about a font.
+* `fonttools`: [TTX/fonttools (Behdad's fork)](https://github.com/behdad/fonttools).
 
 ## Recommendations
 
