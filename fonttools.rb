@@ -2,8 +2,9 @@ require "formula"
 
 class Fonttools < Formula
   homepage "https://github.com/behdad/fonttools"
-  url "https://github.com/behdad/fonttools/archive/2.5.tar.gz"
-  sha1 "e972ed601602435b080ce79f129b441daefb2f75"
+  url "https://github.com/behdad/fonttools/archive/3.0.tar.gz"
+  sha1 "63715415bcd04f0788a85cb8b9c2169612bd414a"
+  head "https://github.com/behdad/fonttools.git"
 
   depends_on :python if MacOS.version <= :snow_leopard
 
