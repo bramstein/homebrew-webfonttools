@@ -3,6 +3,7 @@ require "formula"
 class Sfntly < Formula
   homepage "https://github.com/googlei18n/sfntly"
   url "https://github.com/googlei18n/sfntly"
+  version '239'
 
   depends_on :ant => :build
 
