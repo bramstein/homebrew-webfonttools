@@ -1,9 +1,8 @@
 require "formula"
 
 class Sfntly < Formula
-  homepage "https://code.google.com/p/sfntly/"
-  url "http://sfntly.googlecode.com/svn/trunk/java/", :using => :svn, :revision => 239
-  version '239'
+  homepage "https://github.com/googlei18n/sfntly"
+  url "https://github.com/googlei18n/sfntly"
 
   depends_on :ant => :build
 
