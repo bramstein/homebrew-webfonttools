@@ -3,7 +3,7 @@ require "formula"
 class Ttf2eot < Formula
   homepage "https://code.google.com/p/ttf2eot/"
   url "https://ttf2eot.googlecode.com/files/ttf2eot-0.0.2-2.tar.gz"
-  sha1 "c9a64216e7a090cb50f7a5074865218623dea75d"
+  sha256 "023cf04d7c717657e92afe566518bf2a696ab22a2a8eba764340000bebff8db8"
 
   def install
     system "make"
