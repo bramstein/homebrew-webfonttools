@@ -4,7 +4,7 @@ require "base64"
 class Sfnt2woffZopfli < Formula
   homepage "https://github.com/bramstein/sfnt2woff-zopfli"
   url "https://github.com/bramstein/sfnt2woff-zopfli/archive/v1.0.1.tar.gz"
-  sha1 "c9d182508c59cf1d17df16abedb534542196bcc7"
+  sha256 "0da173a3f50ce4bb6b4817b3fcebb55a28c95546b852824f9cb16afefa8db45b"
 
   def install
     system "make"
