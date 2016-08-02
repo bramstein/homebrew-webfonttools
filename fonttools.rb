@@ -1,9 +1,9 @@
-require "formula"
-
 class Fonttools < Formula
+  desc "Python library for manipulating fonts"
   homepage "https://github.com/behdad/fonttools"
   url "https://github.com/behdad/fonttools/archive/3.0.tar.gz"
-  sha256 "bab4046b1777f4b4a7002c8ebe44a977610d1473a9f6fec23dc7d1b891dcec20"
+  sha256 "3bc9141d608603faac3f800482feec78a550d0a94c29ff3850471dbe4ad9e941"
+
   head "https://github.com/behdad/fonttools.git"
 
   depends_on :python if MacOS.version <= :snow_leopard
@@ -16,5 +16,10 @@ class Fonttools < Formula
 
     bin.install Dir["#{libexec}/bin/*"]
     bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+  end
+
+  test do
+    cp "/Library/Fonts/Arial.ttf", testpath
+    system bin/"ttx", "Arial.ttf"
   end
 end
