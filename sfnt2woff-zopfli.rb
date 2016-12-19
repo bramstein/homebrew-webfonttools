@@ -3,7 +3,7 @@ require "base64"
 class Sfnt2woffZopfli < Formula
   desc "WOFF utilities with Zopfli compression"
   homepage "https://github.com/bramstein/sfnt2woff-zopfli"
-  url "https://github.com/bramstein/sfnt2woff-zopfli/archive/v1.0.1.tar.gz"
+  url "https://github.com/bramstein/sfnt2woff-zopfli/archive/v1.1.0.tar.gz"
   sha256 "135a211bdafdbd05a892ff627838f8822697f60154cfae371e08ad451207206f"
 
   def install
