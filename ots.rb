@@ -15,11 +15,13 @@ class Ots < Formula
     system "./autogen.sh" if build.head?
     system "./configure"
     system "make", "CXXFLAGS=-DOTS_DEBUG"
-    bin.install "perf"
-    bin.install "ot-sanitise"
+    bin.install "ots-perf"
+    bin.install "ots-sanitize"
+    bin.install "ots-side-by-side"
+    bin.install "ots-validator-checker"
   end
 
   test do
-    system "ot-sanitise", "--version"
+    system "ots-sanitize", "--version"
   end
 end
