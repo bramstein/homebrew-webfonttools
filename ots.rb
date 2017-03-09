@@ -16,6 +16,7 @@ class Ots < Formula
     system "./configure"
     system "make", "CXXFLAGS=-DOTS_DEBUG"
     bin.install "ots-sanitize"
+    bin.install "ots-perf"
     bin.install "ots-side-by-side"
     bin.install "ots-idempotent"
     bin.install "ots-validator-checker"
