@@ -1,9 +1,9 @@
 class Sfnt2woff < Formula
   desc "Convert existing TrueType/OpenType fonts to WOFF format"
-  homepage "http://people.mozilla.org/~jkew/woff/"
-  url "http://people.mozilla.org/~jkew/woff/woff-code-latest.zip"
+  homepage "https://github.com/bramstein/sfnt2woff"
+  url "https://github.com/bramstein/sfnt2woff/archive/master.tar.gz"
   version "2009-10-04"
-  sha256 "7713630d2f43320a1d92e2dbb014ca3201caab1dd4c0ab92816016824c680d96"
+  sha256 "0a7b77c79c2c0065e822a973b05c800aa2d07adf2fa320a7fcb237652d3bca63"
 
   def install
     system "make"
