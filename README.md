@@ -23,5 +23,5 @@ Then install any of the following formula by using `brew install <formula>`:
 So which tool should you use to create web fonts? I recommend the following because they create the smallest possible font files:
 
 * WOFF2: Use `woff2`.
-* WOFF: Use `sfnt2woff-zopfli` if you're generating static files, use `sfnt2woff` or `sfnttool` if you're dynamically generating WOFF files.
+* WOFF: Use `sfnt2woff-zopfli` if you're generating static files, use `sfnt2woff` or `fonttools` if you're dynamically generating WOFF files.
 * EOT: Use `sfntly`'s `sfnttool` with the `-e` and `-x` options to generate compressed EOT files.
