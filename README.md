@@ -1,21 +1,16 @@
 # Homebrew web font tools
 
-Add the tap:
+    brew tap bramstein/webfonttools
+    brew install woff2
 
-    > brew tap bramstein/webfonttools
-
-Update brew:
-
-    > brew update
-
-Then install any of the following formula by using `brew install <formula>`:
+Or install any of the following formulas with `brew install <formula>`:
 
 * `sfnt2woff`: Tool for converting TrueType and OpenType font files to WOFF made by Jonathan Kew. This installs two utilities `sfnt2woff` to compress and `woff2sfnt` to decompress.
 * `sfnt2woff-zopfli`: Modified version of sfnt2woff that uses the Zopfli compression algorithm (2-5% better compression than standard WOFF). This installs two utilities `sfnt2woff-zopfli` to compress and `woff2sfnt-zopfli` to decompress.
 * `woff2`: WOFF2 compression and decompression utilities by Google. This installs two utilities `woff2_compress` to compress and `woff2_decompress` to decompress.
 * `ttf2eot`: Tool for converting TrueType font files to the embedded OpenType format (EOT). Does not include MTX compression. The installed utility is called `ttf2eot`.
 * `sfntly`: Google's subsetting and font conversion tools. This will install two utilities called `sfnttool` and `fontinfo`. The `sfnttool` utility performs subsetting and can also create WOFF and EOT files. The `fontinfo` utility shows you information about a font.
-* `fonttools`: [TTX/fonttools (Behdad's fork)](https://github.com/behdad/fonttools).
+* `fonttools`: [TTX/fonttools](https://github.com/fonttools/fonttools) (this package is now in [homebrew-core](https://github.com/Homebrew/homebrew-core/blob/master/Formula/fonttools.rb), you can `brew install` it without this tap).
 * `ots`: [OpenType sanitiser](https://github.com/khaledhosny/ots)
 
 ## Recommendations
