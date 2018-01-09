@@ -5,6 +5,7 @@
 
 Or install any of the following formulas with `brew install <formula>`:
 
+* `afdko`: The Adobe Font Development Kit for OpenType.
 * `sfnt2woff`: Tool for converting TrueType and OpenType font files to WOFF made by Jonathan Kew. This installs two utilities `sfnt2woff` to compress and `woff2sfnt` to decompress.
 * `sfnt2woff-zopfli`: Modified version of sfnt2woff that uses the Zopfli compression algorithm (2-5% better compression than standard WOFF). This installs two utilities `sfnt2woff-zopfli` to compress and `woff2sfnt-zopfli` to decompress.
 * `woff2`: WOFF2 compression and decompression utilities by Google. This installs two utilities `woff2_compress` to compress and `woff2_decompress` to decompress.
