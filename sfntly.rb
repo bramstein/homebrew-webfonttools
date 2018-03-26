@@ -4,7 +4,7 @@ class Sfntly < Formula
   url "https://github.com/googlei18n/sfntly"
   version '239'
 
-  depends_on :ant => :build
+  depends_on "ant"
 
   def install
     system "ant", "-f", "java/build.xml"
