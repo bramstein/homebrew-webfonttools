@@ -6,26 +6,19 @@ class Ots < Formula
 
   head "https://github.com/khaledhosny/ots.git"
 
-  depends_on "autoconf"   => :build
-  depends_on "automake"   => :build
-  depends_on "libtool"    => :build
-  depends_on "pkg-config" => :build
+  depends_on "ninja" => :build
+  depends_on "meson" => :build
   depends_on "freetype"   => :optional
 
   def install
-    if build.with? "freetype"
-      ENV.prepend_path "PKG_CONFIG_PATH", Formula["freetype"].opt_lib/"pkgconfig"
-    end
+    system "meson build"
+    system "ninja -C build"
 
-    system "./autogen.sh" if build.head?
-    system "./configure"
-    system "make", "CXXFLAGS=-DOTS_DEBUG"
-
-    bin.install "ots-sanitize"
-    bin.install "ots-perf"
-    bin.install "ots-idempotent"
-    bin.install "ots-validator-checker"
-    bin.install "ots-side-by-side" if build.with? "freetype"
+    bin.install "build/ots-sanitize"
+    bin.install "build/ots-perf"
+    bin.install "build/ots-idempotent"
+    bin.install "build/ots-validator-checker"
+    bin.install "build/ots-side-by-side" if build.with? "freetype"
   end
 
   test do
