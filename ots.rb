@@ -1,15 +1,13 @@
 class Ots < Formula
   desc "OpenType Sanitiser parses validates & sanitizes OpenType & WOFF2 font files"
   homepage "https://github.com/khaledhosny/ots"
-  url "https://github.com/khaledhosny/ots/releases/download/v6.1.1/ots-6.1.1.tar.gz"
-  sha256 "d9ca90b4e0cbf2aa3f7bafbf8a2ca6c8b76c4f1c65da9a3b4e374ee21286cee2"
+  url "https://github.com/khaledhosny/ots/archive/refs/tags/v8.1.4.tar.gz"
+  sha256 "4cdbd7d93fd6b89ad8bf9861d31540ab99a6c79bbde466c21d2f6044d26373ad"
 
   head "https://github.com/khaledhosny/ots.git"
 
-  depends_on "autoconf"   => :build
-  depends_on "automake"   => :build
-  depends_on "libtool"    => :build
-  depends_on "pkg-config" => :build
+  depends_on "ninja" => :build
+  depends_on "meson" => :build
   depends_on "freetype"   => :optional
 
   def install
@@ -17,15 +15,14 @@ class Ots < Formula
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["freetype"].opt_lib/"pkgconfig"
     end
 
-    system "./autogen.sh" if build.head?
-    system "./configure"
-    system "make", "CXXFLAGS=-DOTS_DEBUG"
+    system "meson build"
+    system "ninja -C build"
 
-    bin.install "ots-sanitize"
-    bin.install "ots-perf"
-    bin.install "ots-idempotent"
-    bin.install "ots-validator-checker"
-    bin.install "ots-side-by-side" if build.with? "freetype"
+    bin.install "build/ots-sanitize"
+    bin.install "build/ots-perf"
+    bin.install "build/ots-idempotent"
+    bin.install "build/ots-validator-checker"
+    bin.install "build/ots-side-by-side" if build.with? "freetype"
   end
 
   test do
